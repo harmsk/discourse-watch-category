@@ -9,13 +9,13 @@ module ::WatchCategory
   def self.watch_category!
     groups_cats = {
       # "group" => ["category", "another-top-level-category", ["parent-category", "sub-category"] ],
-      "info1300-fa2018" => ["info1300-fa2018"]
       # "everyone" makes every user watch the listed categories
       # "everyone" => [ "announcements" ]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
 
     groups_cats = {
+      "info1300-fa2018" => ["info1300-fa2018"]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
   end
