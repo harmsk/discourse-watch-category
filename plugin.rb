@@ -9,34 +9,13 @@ module ::WatchCategory
   def self.watch_category!
     groups_cats = {
       # "group" => ["category", "another-top-level-category", ["parent-category", "sub-category"] ],
-      "coordinating-cmte" => [ ["private", "coordinating-committee"] ],
-      "digcol-cmte" => [ ["private", "digital-collections-committee"] ],
-      "digped-cmte" => [ ["private", "digital-pedagogy-committee"] ],
-      "digschol-cmte" => [ ["private", "digital-scholarship-committee"] ],
-      "eresources-cmte" => [ ["private", "e-resources-committee"], ["libraries", "buyers-group"] ],
-      "infolit-cmte" => [ ["private", "information-literacy-committee"] ],
-      "inst-research-cmte" => [ ["private", "institutional-research-assessment-committee"] ],
-      "oclc-cmte" => [ ["private", "oclc-programs-committee"] ],
-      "profdev-cmte" => [ ["private", "professional-development-committee"] ],
-      "grant-review-cmte" => [ ["private", "grant-review-cmte"] ],
-      "amical-2018-joint-org" => [ ["private", "amical-2018-joint-org"] ],
-      "amical-2018-program-cmte" => [ ["private", "amical-2018-program-cmte"] ],
-      "dhsi-2018-cohort" => [ ["private", "dhsi-2018-cohort"] ],
-      "chairs" => [ ["private", "chairs"] ],
-      "facdevcenters" => [ ["private", "facdevcenters"] ]
+      "info1300-fa2018" => ["info1300-fa2018"]
       # "everyone" makes every user watch the listed categories
       # "everyone" => [ "announcements" ]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
 
     groups_cats = {
-      "infolit" => [ ["interest-groups", "information-literacy"] ],
-      "pedagogy" => [ ["interest-groups", "pedagogy"] ],
-      "open-source-library-systems" => [ ["interest-groups", "open-source-library-systems"] ],
-      "digital-literacy" => [ ["interest-groups", "digital-literacy"] ],
-      "coordinating-cmte" => [ "announcements" ],
-      "representatives" => [ "announcements" ],
-      "lib-buyers" => [ ["private", "buyers-group"] ]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
   end
